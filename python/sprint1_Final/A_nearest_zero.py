@@ -1,9 +1,10 @@
 #ID 78101258 3 дек 2022, 14:33:25
-def get_house(n, street):
+def nearest_zero(n, data):
+    """Функция вычисления ближайщего нуля в последовательности data."""
     count = n
     result = []
     for i in range(n):
-        if street[i] == 0:
+        if data[i] == 0:
             result.append(0)
             count = 1
         else:
@@ -19,10 +20,18 @@ def get_house(n, street):
             count += 1
     return result
 
-def read_input():
-    n = int(input())
-    street = list(map(int, input().strip().split()))
-    return n, street
 
-n, street = read_input()
-print(" ".join(map(str, get_house(n, street))))
+def read_input():
+    """Функция ввода исходных данных."""
+    n = int(input())
+    data = list(map(int, input().strip().split()))
+    return n, data
+
+
+def main():
+    n, data = read_input()
+    print(" ".join(map(str, nearest_zero(n, data))))
+
+
+if __name__ == '__main__':
+    main()
