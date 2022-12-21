@@ -16,6 +16,7 @@ def get_house(n, street):
 
 
 def read_input():
+    """Функция ввода исходных данных."""
     n = int(input())
     street = list(map(int, input().strip().split()))
     return n, street
