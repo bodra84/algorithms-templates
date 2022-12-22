@@ -87,9 +87,7 @@ def main():
                 print(result)
         except AttributeError:
             print("Ошибка команды!")
-        except DequeIsFull:
-            print("error")
-        except DequeIsEmpty:
+        except (DequeIsFull, DequeIsEmpty):
             print("error")
 
 
